@@ -6,8 +6,8 @@ Entra AuthContext step-up MFA sample
 
 There are powershell configuration scripts in the [scripts](scripts) folder. Run them in the following order.
 
-|------|------|------|
 | Step | Script | Details |
+|------|--------|--------|
 | 1. | [Connect-to-MgGrapoh.ps1](scripts/Connect-to-MgGrapoh.ps1) | Imports the Graph modules and logs in |
 | 2. | [Create-AuthContext-and-CA-Policy.ps1](scripts/Create-AuthContext-and-CA-Policy.ps1) | Creates the Authentication Context object and a Conditional Access policy targetin it. |
 | 3. | [Create-AuthContext-App-and-Api.ps1](scripts/Create-AuthContext-App-and-Api.ps1) | Creates the WebApp and the WebApi Entra app registrations. 

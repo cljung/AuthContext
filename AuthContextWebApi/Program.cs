@@ -10,9 +10,6 @@ public class Program {
         builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("Entra"));
 
-        //builder.Services.AddAuthorization();
-
-
         string[] requiredPermissions = new string[] { "access_as_user", "Api.Read" };
         builder.Services.AddAuthorization(options => {            
             options.AddPolicy("ScopeOrRolePolicy.Read", policy => {
