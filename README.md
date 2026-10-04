@@ -2,6 +2,8 @@
 
 Entra AuthContext step-up MFA sample
 
+There is a [blog post](https://blog.redbaronofazure.com/?p=8086) explaining Entra Authentication Context in detail that this sample code belongs to.
+
 ## Configuration via Powershell
 
 There are powershell configuration scripts in the [scripts](scripts) folder. Run them in the following order.
