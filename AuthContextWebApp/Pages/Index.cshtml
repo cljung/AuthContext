@@ -1,0 +1,26 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Entra Authentication Context Demo</h1>
+    <p>
+        This webapp demonstrates Entra Authentication Context Demo with step-up MFA.
+    </p>
+    <p>
+        <h3>Configure in Entra Admin portal</h3>
+        <ol style="text-align:left">
+            <li>Create a group and add your test user as member.</li>
+            <li>Create a new Authentication context in the Entra Portal. Use 'c13'.</li>
+            <li>Create a new CA Policy that targets the Authentication context that includes the group.</li>
+        </ol>
+        <h3>Test steps</h3>
+        <ol style="text-align:left">
+            <li>Click Call API to see that the API fails the call as the acr claim 'c13' is missing in the access token. The API sends an WWW-Authenticate challange in the HTTP response</li>
+            <li>Click Step-up MFA to perform the MFA request and acquire the 'c13' in the acr claim.</li>
+            <li>Click Call API to see that the API call succeeds</li>            
+        </ol>
+    </p>
+</div>

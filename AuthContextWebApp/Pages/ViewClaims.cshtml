@@ -1,0 +1,59 @@
+﻿@page
+@model ViewClaimsModel
+@{
+    ViewData["Title"] = "View Claims";
+}
+<h1>@ViewData["Title"]</h1>
+
+<style>
+  table {
+    font-size:smaller;
+    width: 100%;
+    border-collapse: collapse; 
+    border: 1px solid #000000; 
+  }
+
+  th, td {
+    border: 1px solid #000000; 
+    padding: 10px; 
+    text-align: left;
+  }
+  thead tr {
+    background-color: #e0e0e0;
+    font-weight: bold;
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+</style>
+<div class="text-center">
+    @if (User.Identity?.IsAuthenticated == true) {
+        <p>You are signed in! Below are the claims in your ID token. For more information, visit: <a href="https://learn.microsoft.com/azure/active-directory/develop/id-tokens">Microsoft identity platform ID tokens</a></p>
+
+        <table>
+            <thread>
+                <thead>
+                    <th>Claims</th>
+                    <th>Value</th>
+                </thead>
+            </thread>
+            <tbody>
+                @foreach (var item in @User.Claims) {
+                    <tr>
+                        <td>@item.Type</td>
+                        <td>@item.Value</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    } else {
+        <p>You can only see your user profile when you are signed in.</p>
+    }
+
+</div>
+

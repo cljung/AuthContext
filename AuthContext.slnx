@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/scripts/">
+    <File Path="scripts/CallAPI-ClientCredentials.ps1" />
+    <File Path="scripts/Connect-to-MgGraph.ps1" />
+    <File Path="scripts/Create-AuthContext-and-CA-Policy.ps1" />
+    <File Path="scripts/Create-AuthContext-App-and-Api.ps1" />
+  </Folder>
+  <Project Path="AuthContextWebApi/AuthContextWebApi.csproj" Id="d8352bcd-561d-4f89-8378-090d54d63af1" />
+  <Project Path="AuthContextWebApp\AuthContextWebApp.csproj" />
+</Solution>
